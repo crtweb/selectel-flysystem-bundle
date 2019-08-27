@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+
+    selectel-bundle-php:
+        container_name:  youtool-selectel-bundle-php
+        restart: 'no'
+        tty: true
+        build:
+            context: ./Php
+        volumes:
+            - ./../:/var/app:cached

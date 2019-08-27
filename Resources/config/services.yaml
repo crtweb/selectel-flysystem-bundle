@@ -1,0 +1,41 @@
+services:
+
+
+
+    youtool_selectel.config.config:
+        class: Youtool\SelectelBundle\Config\MemoryConfig
+        arguments:
+            $accountId: '%youtool_selectel.account_id%'
+            $userId: '%youtool_selectel.client_id%'
+            $userPassword: '%youtool_selectel.client_password%'
+            $container: '%youtool_selectel.container%'
+            $apiHost: '%youtool_selectel.api_host%'
+
+    Youtool\SelectelBundle\Config\ConfigInterface:
+        alias: '@youtool_selectel.config.config'
+
+
+
+    youtool_selectel.service.transport:
+        class: GuzzleHttp\Client
+
+
+
+    youtool_selectel.service.service:
+        class: Youtool\SelectelBundle\Service\SelectelService
+        arguments:
+            $config: '@youtool_selectel.config.config'
+            $transport: '@youtool_selectel.service.transport'
+
+    Youtool\SelectelBundle\Service\ServiceInterface:
+        alias: youtool_selectel.service.service
+
+
+
+    youtool_selectel.adapter.adapter:
+        class: Youtool\SelectelBundle\Adapter\SelectelAdapter
+        arguments:
+            $service: '@youtool_selectel.service.service'
+
+    Youtool\SelectelBundle\Adapter\SelectelAdapter:
+        alias: youtool_selectel.adapter.adapter

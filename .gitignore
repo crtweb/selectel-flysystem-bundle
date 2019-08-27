@@ -1,0 +1,9 @@
+vendor
+composer.lock
+Tests/coverage
+.php_cs.cache
+composer.phar
+phpDocumentor.phar
+phpdoc-cache-*
+test.php
+.idea

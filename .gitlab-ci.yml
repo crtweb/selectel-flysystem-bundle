@@ -1,0 +1,41 @@
+image: gitlab/dind:latest
+
+
+stages:
+  - build
+  - tests
+
+
+cache:
+  paths:
+    - vendor
+
+
+variables:
+  TEST_IMAGE: git.crtweb.ru:4567/youtool/selectel-bundle/tests:latest
+  CI_REGISTRY: git.crtweb.ru:4567
+
+
+before_script:
+  - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+
+
+
+build_tests_container:
+  stage: build
+  script:
+    - docker build --pull -t $TEST_IMAGE -f Docker/Php/Dockerfile .
+    - docker push $TEST_IMAGE
+
+
+
+tests:
+  stage: tests
+  image: $TEST_IMAGE
+  before_script:
+    - composer update --no-interaction --no-ansi
+  script:
+    - vendor/bin/php-cs-fixer fix --config=.php_cs.dist -v --dry-run --stop-on-violation --using-cache=no
+    - vendor/bin/phpcpd ./ --exclude vendor --exclude Tests -v
+    - vendor/bin/phpunit
+    - vendor/bin/psalm
