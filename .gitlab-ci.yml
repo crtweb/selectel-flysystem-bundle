@@ -12,7 +12,7 @@ cache:
 
 
 variables:
-  TEST_IMAGE: git.crtweb.ru:4567/youtool/selectel-bundle/tests:latest
+  TEST_IMAGE: git.crtweb.ru:4567/creative-packages/selectel-flysystem-bundle/tests:latest
   CI_REGISTRY: git.crtweb.ru:4567
 
 

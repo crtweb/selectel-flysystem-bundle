@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\Tests\Adapter;
+namespace Creative\SelectelBundle\Tests\Adapter;
 
-use Youtool\SelectelBundle\Tests\BaseCase;
-use Youtool\SelectelBundle\Adapter\SelectelAdapter;
-use Youtool\SelectelBundle\Service\ServiceInterface;
+use Creative\SelectelBundle\Tests\BaseCase;
+use Creative\SelectelBundle\Adapter\SelectelAdapter;
+use Creative\SelectelBundle\Service\ServiceInterface;
 use League\Flysystem\Config;
 
 /**

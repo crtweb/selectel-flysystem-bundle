@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\DependencyInjection;
+namespace Creative\SelectelBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -19,7 +19,7 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('youtool_selectel');
+        $treeBuilder = new TreeBuilder('creative_selectel');
 
         $treeBuilder->getRootNode()
             ->children()

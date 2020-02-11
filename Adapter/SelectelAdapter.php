@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\Adapter;
+namespace Creative\SelectelBundle\Adapter;
 
-use Youtool\SelectelBundle\Service\ServiceInterface;
-use Youtool\SelectelBundle\Exception\TransportException;
-use Youtool\SelectelBundle\Exception\AuthException;
-use Youtool\SelectelBundle\Exception\UnexpectedResponseException;
+use Creative\SelectelBundle\Service\ServiceInterface;
+use Creative\SelectelBundle\Exception\TransportException;
+use Creative\SelectelBundle\Exception\AuthException;
+use Creative\SelectelBundle\Exception\UnexpectedResponseException;
 use League\Flysystem\AdapterInterface;
 use League\Flysystem\Config;
 use League\Flysystem\Util;

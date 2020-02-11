@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\Response;
+namespace Creative\SelectelBundle\Response;
 
 use Symfony\Component\HttpFoundation\Response;
 use InvalidArgumentException;

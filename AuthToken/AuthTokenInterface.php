@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\AuthToken;
+namespace Creative\SelectelBundle\AuthToken;
 
 /**
  * Интерфейс для объекта, который содержит токен авторизации на стороне API.

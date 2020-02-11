@@ -2,40 +2,40 @@ services:
 
 
 
-    youtool_selectel.config.config:
-        class: Youtool\SelectelBundle\Config\MemoryConfig
+    creative_selectel.config.config:
+        class: Creative\SelectelBundle\Config\MemoryConfig
         arguments:
-            $accountId: '%youtool_selectel.account_id%'
-            $userId: '%youtool_selectel.client_id%'
-            $userPassword: '%youtool_selectel.client_password%'
-            $container: '%youtool_selectel.container%'
-            $apiHost: '%youtool_selectel.api_host%'
+            $accountId: '%creative_selectel.account_id%'
+            $userId: '%creative_selectel.client_id%'
+            $userPassword: '%creative_selectel.client_password%'
+            $container: '%creative_selectel.container%'
+            $apiHost: '%creative_selectel.api_host%'
 
-    Youtool\SelectelBundle\Config\ConfigInterface:
-        alias: '@youtool_selectel.config.config'
+    Creative\SelectelBundle\Config\ConfigInterface:
+        alias: '@creative_selectel.config.config'
 
 
 
-    youtool_selectel.service.transport:
+    creative_selectel.service.transport:
         class: GuzzleHttp\Client
 
 
 
-    youtool_selectel.service.service:
-        class: Youtool\SelectelBundle\Service\SelectelService
+    creative_selectel.service.service:
+        class: Creative\SelectelBundle\Service\SelectelService
         arguments:
-            $config: '@youtool_selectel.config.config'
-            $transport: '@youtool_selectel.service.transport'
+            $config: '@creative_selectel.config.config'
+            $transport: '@creative_selectel.service.transport'
 
-    Youtool\SelectelBundle\Service\ServiceInterface:
-        alias: youtool_selectel.service.service
+    Creative\SelectelBundle\Service\ServiceInterface:
+        alias: creative_selectel.service.service
 
 
 
-    youtool_selectel.adapter.adapter:
-        class: Youtool\SelectelBundle\Adapter\SelectelAdapter
+    creative_selectel.adapter.adapter:
+        class: Creative\SelectelBundle\Adapter\SelectelAdapter
         arguments:
-            $service: '@youtool_selectel.service.service'
+            $service: '@creative_selectel.service.service'
 
-    Youtool\SelectelBundle\Adapter\SelectelAdapter:
-        alias: youtool_selectel.adapter.adapter
+    Creative\SelectelBundle\Adapter\SelectelAdapter:
+        alias: creative_selectel.adapter.adapter

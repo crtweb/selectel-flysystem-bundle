@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\DependencyInjection;
+namespace Creative\SelectelBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
@@ -12,7 +12,7 @@ use Symfony\Component\Config\FileLocator;
 /**
  * Класс расширения для предоставления бандлом сервисов.
  */
-class YoutoolSelectelExtension extends Extension
+class CreativeSelectelExtension extends Extension
 {
     /**
      * @inheritdoc
@@ -31,7 +31,7 @@ class YoutoolSelectelExtension extends Extension
         $configuration = new Configuration;
         $config = $this->processConfiguration($configuration, $configs);
         foreach ($config as $key => $value) {
-            $container->setParameter('youtool_selectel.' . $key, $value);
+            $container->setParameter('creative_selectel.' . $key, $value);
         }
     }
 

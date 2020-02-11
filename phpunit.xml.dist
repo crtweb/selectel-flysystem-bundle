@@ -2,7 +2,7 @@
 
 <phpunit colors="true" bootstrap="vendor/autoload.php">
     <testsuites>
-        <testsuite name="YoutoolSelectelBundle for Youtool project">
+        <testsuite name="CreativeSelectelBundle">
             <directory>./Tests</directory>
         </testsuite>
     </testsuites>

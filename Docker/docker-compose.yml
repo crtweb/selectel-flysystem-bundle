@@ -3,7 +3,7 @@ version: '2'
 services:
 
     selectel-bundle-php:
-        container_name:  youtool-selectel-bundle-php
+        container_name:  creative-selectel-bundle-php
         restart: 'no'
         tty: true
         build:

@@ -18,7 +18,7 @@
     "repositories": [
         {
             "type": "git",
-            "url": "https://git.crtweb.ru/youtool/selectel-bundle"
+            "url": "https://git.crtweb.ru/creative-packages/selectel-flysystem-bundle.git"
         }
     ]
     ```
@@ -26,14 +26,14 @@
 2. Добавить пакет бандла в проект:
 
     ```bash
-    $ composer require youtool/selectel-bundle
+    $ composer require creative-packages/selectel-flysystem-bundle
     ```
 
 3. Настроить доступ к облачному хранилищу selectel:
 
     ```yaml
-    # app/config/packages/youtool_selectel.yaml
-    youtool_selectel:
+    # app/config/packages/creative_selectel.yaml
+    creative_selectel:
         account_id: 123123
         client_id: 123123_prod
         client_password: prod_password
@@ -55,7 +55,7 @@
                     directory: '%kernel.cache_dir%/flysystem'
             selectel.flysystem_adapter:
                 custom:
-                    service: youtool_selectel.adapter.adapter
+                    service: creative_selectel.adapter.adapter
         filesystems:
             default_filesystem:
                 adapter: selectel.flysystem_adapter
@@ -84,9 +84,9 @@
 Следует либо ввести координаты тестового контейнера:
 
 ```yaml
-# app/config/packages/dev/youtool_selectel.yaml для локальной разработки
-# app/config/packages/test/youtool_selectel.yaml для тестов
-youtool_selectel:
+# app/config/packages/dev/creative_selectel.yaml для локальной разработки
+# app/config/packages/test/creative_selectel.yaml для тестов
+creative_selectel:
     account_id: 123123
     client_id: 123123_test
     client_password: test_password

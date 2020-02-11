@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\Tests\Service;
+namespace Creative\SelectelBundle\Tests\Service;
 
-use Youtool\SelectelBundle\Tests\BaseCase;
-use Youtool\SelectelBundle\Service\SelectelService;
-use Youtool\SelectelBundle\Config\ConfigInterface;
-use Youtool\SelectelBundle\Config\MemoryConfig;
-use Youtool\SelectelBundle\Exception\UnexpectedResponseException;
+use Creative\SelectelBundle\Tests\BaseCase;
+use Creative\SelectelBundle\Service\SelectelService;
+use Creative\SelectelBundle\Config\ConfigInterface;
+use Creative\SelectelBundle\Config\MemoryConfig;
+use Creative\SelectelBundle\Exception\UnexpectedResponseException;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Psr7;

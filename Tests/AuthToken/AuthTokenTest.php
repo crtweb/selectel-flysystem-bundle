@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\Tests\AuthToken;
+namespace Creative\SelectelBundle\Tests\AuthToken;
 
-use Youtool\SelectelBundle\Tests\BaseCase;
-use Youtool\SelectelBundle\AuthToken\AuthToken;
-use Youtool\SelectelBundle\Exception\AuthException;
+use Creative\SelectelBundle\Tests\BaseCase;
+use Creative\SelectelBundle\AuthToken\AuthToken;
+use Creative\SelectelBundle\Exception\AuthException;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 use DateTime;

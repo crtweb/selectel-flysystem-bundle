@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\Config;
+namespace Creative\SelectelBundle\Config;
 
 /**
  * Интерфейс для объекта, который содержит настройки для доступа к API selectel.

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\AuthToken;
+namespace Creative\SelectelBundle\AuthToken;
 
-use Youtool\SelectelBundle\Exception\AuthException;
+use Creative\SelectelBundle\Exception\AuthException;
 use Psr\Http\Message\ResponseInterface;
 use DateTime;
 

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\Tests\Config;
+namespace Creative\SelectelBundle\Tests\Config;
 
-use Youtool\SelectelBundle\Tests\BaseCase;
-use Youtool\SelectelBundle\Config\MemoryConfig;
+use Creative\SelectelBundle\Tests\BaseCase;
+use Creative\SelectelBundle\Config\MemoryConfig;
 use InvalidArgumentException;
 
 /**

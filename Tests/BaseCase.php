@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\Tests;
+namespace Creative\SelectelBundle\Tests;
 
 use PHPUnit\Framework\TestCase;
 

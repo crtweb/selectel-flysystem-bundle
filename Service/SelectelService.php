@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\Service;
+namespace Creative\SelectelBundle\Service;
 
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\RequestOptions;
-use Youtool\SelectelBundle\Config\ConfigInterface;
-use Youtool\SelectelBundle\Exception\TransportException;
-use Youtool\SelectelBundle\Exception\AuthException;
-use Youtool\SelectelBundle\Exception\UnexpectedResponseException;
-use Youtool\SelectelBundle\AuthToken\AuthTokenInterface;
-use Youtool\SelectelBundle\AuthToken\AuthToken;
+use Creative\SelectelBundle\Config\ConfigInterface;
+use Creative\SelectelBundle\Exception\TransportException;
+use Creative\SelectelBundle\Exception\AuthException;
+use Creative\SelectelBundle\Exception\UnexpectedResponseException;
+use Creative\SelectelBundle\AuthToken\AuthTokenInterface;
+use Creative\SelectelBundle\AuthToken\AuthToken;
 use Psr\Http\Message\ResponseInterface;
 use DateTime;
 use Exception;

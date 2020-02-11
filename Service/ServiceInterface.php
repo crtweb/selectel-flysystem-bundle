@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\Service;
+namespace Creative\SelectelBundle\Service;
 
-use Youtool\SelectelBundle\Exception\TransportException;
-use Youtool\SelectelBundle\Exception\AuthException;
-use Youtool\SelectelBundle\Exception\UnexpectedResponseException;
+use Creative\SelectelBundle\Exception\TransportException;
+use Creative\SelectelBundle\Exception\AuthException;
+use Creative\SelectelBundle\Exception\UnexpectedResponseException;
 use InvalidArgumentException;
 
 /**

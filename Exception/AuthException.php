@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\Exception;
+namespace Creative\SelectelBundle\Exception;
 
 use Exception;
 

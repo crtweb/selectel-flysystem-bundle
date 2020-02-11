@@ -1,5 +1,5 @@
 {
-    "name": "youtool/selectel-bundle",
+    "name": "creative-packages/selectel-flysystem-bundle",
     "type": "symfony-bundle",
     "description": "Bundle for selectel's api",
     "keywords": [],
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Youtool\\SelectelBundle\\": ""
+            "Creative\\SelectelBundle\\": ""
         },
         "exclude-from-classmap": [
             "/Tests/"

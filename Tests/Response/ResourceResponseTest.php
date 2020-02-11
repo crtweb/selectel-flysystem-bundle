@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Youtool\SelectelBundle\Tests\Response;
+namespace Creative\SelectelBundle\Tests\Response;
 
-use Youtool\SelectelBundle\Tests\BaseCase;
-use Youtool\SelectelBundle\Response\ResourceResponse;
+use Creative\SelectelBundle\Tests\BaseCase;
+use Creative\SelectelBundle\Response\ResourceResponse;
 use InvalidArgumentException;
 use LogicException;
 
