@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Creative\SelectelBundle\Adapter;
 
-use Creative\SelectelBundle\Service\ServiceInterface;
-use Creative\SelectelBundle\Exception\TransportException;
 use Creative\SelectelBundle\Exception\AuthException;
+use Creative\SelectelBundle\Exception\TransportException;
 use Creative\SelectelBundle\Exception\UnexpectedResponseException;
+use Creative\SelectelBundle\Service\ServiceInterface;
 use League\Flysystem\AdapterInterface;
 use League\Flysystem\Config;
 use League\Flysystem\Util;

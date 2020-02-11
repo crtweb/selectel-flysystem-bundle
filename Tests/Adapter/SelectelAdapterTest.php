@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Creative\SelectelBundle\Tests\Adapter;
 
-use Creative\SelectelBundle\Tests\BaseCase;
 use Creative\SelectelBundle\Adapter\SelectelAdapter;
 use Creative\SelectelBundle\Service\ServiceInterface;
+use Creative\SelectelBundle\Tests\BaseCase;
 use League\Flysystem\Config;
 
 /**

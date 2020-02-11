@@ -38,9 +38,7 @@ class MemoryConfig implements ConfigInterface
     public function __construct(string $accountId, string $userId, string $userPassword, string $container, string $apiHost = null)
     {
         if ($apiHost !== null && !$this->isStringAbsoluteUri($apiHost)) {
-            throw new InvalidArgumentException(
-                'apiHost parameter must be an absolute uri'
-            );
+            throw new InvalidArgumentException('apiHost parameter must be an absolute uri');
         }
 
         $this->apiHost = $apiHost ? rtrim($apiHost, '/ ') : 'https://api.selcdn.ru';

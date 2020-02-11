@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Creative\SelectelBundle\AuthToken;
 
 use Creative\SelectelBundle\Exception\AuthException;
-use Psr\Http\Message\ResponseInterface;
 use DateTime;
+use Psr\Http\Message\ResponseInterface;
 
 /**
  * Объект, который содержит токен авторизации на стороне API.
@@ -65,9 +65,7 @@ class AuthToken implements AuthTokenInterface
     {
         $statusCode = (int) $response->getStatusCode();
         if ($statusCode < 200 || $statusCode >= 300) {
-            throw new AuthException(
-                "Authorization status code error. Code was: {$statusCode}. Expects: 20x."
-            );
+            throw new AuthException("Authorization status code error. Code was: {$statusCode}. Expects: 20x.");
         }
 
         $body = $response->getBody()->getContents();

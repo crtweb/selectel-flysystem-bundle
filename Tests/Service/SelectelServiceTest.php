@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace Creative\SelectelBundle\Tests\Service;
 
-use Creative\SelectelBundle\Tests\BaseCase;
-use Creative\SelectelBundle\Service\SelectelService;
 use Creative\SelectelBundle\Config\ConfigInterface;
 use Creative\SelectelBundle\Config\MemoryConfig;
 use Creative\SelectelBundle\Exception\UnexpectedResponseException;
-use GuzzleHttp\ClientInterface;
-use GuzzleHttp\RequestOptions;
-use GuzzleHttp\Psr7;
-use Psr\Http\Message\StreamInterface;
+use Creative\SelectelBundle\Service\SelectelService;
+use Creative\SelectelBundle\Tests\BaseCase;
 use DateTime;
+use GuzzleHttp\ClientInterface;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\RequestOptions;
 use InvalidArgumentException;
+use Psr\Http\Message\StreamInterface;
 
 /**
  * Набор тестов для объекта, который предоставляет доступ к API selectel.

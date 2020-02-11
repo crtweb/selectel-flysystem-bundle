@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Creative\SelectelBundle\Tests\Response;
 
-use Creative\SelectelBundle\Tests\BaseCase;
 use Creative\SelectelBundle\Response\ResourceResponse;
+use Creative\SelectelBundle\Tests\BaseCase;
 use InvalidArgumentException;
 use LogicException;
 

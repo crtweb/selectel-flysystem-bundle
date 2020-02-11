@@ -4,18 +4,18 @@ declare(strict_types=1);
 
 namespace Creative\SelectelBundle\Service;
 
-use GuzzleHttp\ClientInterface;
-use GuzzleHttp\RequestOptions;
-use Creative\SelectelBundle\Config\ConfigInterface;
-use Creative\SelectelBundle\Exception\TransportException;
-use Creative\SelectelBundle\Exception\AuthException;
-use Creative\SelectelBundle\Exception\UnexpectedResponseException;
-use Creative\SelectelBundle\AuthToken\AuthTokenInterface;
 use Creative\SelectelBundle\AuthToken\AuthToken;
-use Psr\Http\Message\ResponseInterface;
+use Creative\SelectelBundle\AuthToken\AuthTokenInterface;
+use Creative\SelectelBundle\Config\ConfigInterface;
+use Creative\SelectelBundle\Exception\AuthException;
+use Creative\SelectelBundle\Exception\TransportException;
+use Creative\SelectelBundle\Exception\UnexpectedResponseException;
 use DateTime;
 use Exception;
+use GuzzleHttp\ClientInterface;
+use GuzzleHttp\RequestOptions;
 use InvalidArgumentException;
+use Psr\Http\Message\ResponseInterface;
 
 /**
  * Объект, который совершает запросы к API selectel.
@@ -60,9 +60,7 @@ class SelectelService implements ServiceInterface
         ]);
 
         if ($response->getStatusCode() !== 201) {
-            throw new UnexpectedResponseException(
-                'Expects 201 on write response, got: ' . $response->getStatusCode()
-            );
+            throw new UnexpectedResponseException('Expects 201 on write response, got: ' . $response->getStatusCode());
         }
     }
 
@@ -72,9 +70,7 @@ class SelectelService implements ServiceInterface
     public function writeStream(string $file, $resource): void
     {
         if (!is_resource($resource)) {
-            throw new InvalidArgumentException(
-                'Second parameter for writeStream must be a valid resource'
-            );
+            throw new InvalidArgumentException('Second parameter for writeStream must be a valid resource');
         }
 
         $file = $this->normalizeFileName($file);
@@ -86,9 +82,7 @@ class SelectelService implements ServiceInterface
         $stream->detach();
 
         if ($response->getStatusCode() !== 201) {
-            throw new UnexpectedResponseException(
-                'Expects 201 on writeStream response, got: ' . $response->getStatusCode()
-            );
+            throw new UnexpectedResponseException('Expects 201 on writeStream response, got: ' . $response->getStatusCode());
         }
     }
 
@@ -101,9 +95,7 @@ class SelectelService implements ServiceInterface
 
         $response = $this->requestAuthorized('get', $file);
         if ($response->getStatusCode() !== 200) {
-            throw new UnexpectedResponseException(
-                'Expects 200 on read response, got: ' . $response->getStatusCode()
-            );
+            throw new UnexpectedResponseException('Expects 200 on read response, got: ' . $response->getStatusCode());
         }
 
         return $response->getBody()->getContents();
@@ -124,9 +116,7 @@ class SelectelService implements ServiceInterface
         $stream->detach();
 
         if ($response->getStatusCode() !== 200) {
-            throw new UnexpectedResponseException(
-                'Expects 200 on read response, got: ' . $response->getStatusCode()
-            );
+            throw new UnexpectedResponseException('Expects 200 on read response, got: ' . $response->getStatusCode());
         }
 
         fseek($temp, 0);
@@ -148,9 +138,7 @@ class SelectelService implements ServiceInterface
             ],
         ]);
         if ($response->getStatusCode() !== 201) {
-            throw new UnexpectedResponseException(
-                'Expects 201 on copy response, got: ' . $response->getStatusCode()
-            );
+            throw new UnexpectedResponseException('Expects 201 on copy response, got: ' . $response->getStatusCode());
         }
     }
 
@@ -171,9 +159,7 @@ class SelectelService implements ServiceInterface
             RequestOptions::BODY => implode("\n", $toDelete),
         ]);
         if ($response->getStatusCode() !== 200) {
-            throw new UnexpectedResponseException(
-                'Expects 200 on delete response, got: ' . $response->getStatusCode()
-            );
+            throw new UnexpectedResponseException('Expects 200 on delete response, got: ' . $response->getStatusCode());
         }
     }
 
@@ -211,9 +197,7 @@ class SelectelService implements ServiceInterface
             ],
         ]);
         if ($response->getStatusCode() !== 200) {
-            throw new UnexpectedResponseException(
-                'Expects 200 on delete response, got: ' . $response->getStatusCode()
-            );
+            throw new UnexpectedResponseException('Expects 200 on delete response, got: ' . $response->getStatusCode());
         }
 
         $rawList = $this->decodeJsonResponse($response);

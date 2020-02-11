@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Creative\SelectelBundle\Tests\Config;
 
-use Creative\SelectelBundle\Tests\BaseCase;
 use Creative\SelectelBundle\Config\MemoryConfig;
+use Creative\SelectelBundle\Tests\BaseCase;
 use InvalidArgumentException;
 
 /**

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Creative\SelectelBundle\Service;
 
-use Creative\SelectelBundle\Exception\TransportException;
 use Creative\SelectelBundle\Exception\AuthException;
+use Creative\SelectelBundle\Exception\TransportException;
 use Creative\SelectelBundle\Exception\UnexpectedResponseException;
 use InvalidArgumentException;
 
@@ -26,7 +26,6 @@ interface ServiceInterface
     /**
      * Загружает файл из потока на сервер.
      *
-     * @param string   $file
      * @param resource $resource
      *
      * @throws TransportException

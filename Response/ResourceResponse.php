@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Creative\SelectelBundle\Response;
 
-use Symfony\Component\HttpFoundation\Response;
 use InvalidArgumentException;
 use LogicException;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Объект ответа, который выводит файл из resource.
@@ -28,8 +28,6 @@ class ResourceResponse extends Response
 
     /**
      * @param mixed $resource
-     * @param int   $status
-     * @param array $headers
      *
      * @throws InvalidArgumentException
      */
@@ -68,9 +66,7 @@ class ResourceResponse extends Response
     public function setResource($resource)
     {
         if (!is_resource($resource)) {
-            throw new InvalidArgumentException(
-                'Response awaits valid php resource as response content'
-            );
+            throw new InvalidArgumentException('Response awaits valid php resource as response content');
         }
 
         $this->resource = $resource;

@@ -22,8 +22,6 @@ abstract class BaseCase extends TestCase
      * Использует ленивую инициализацию и создает объект faker только при первом
      * запросе, для всех последующих запросов возвращает тот же самый инстанс,
      * который был создан в первый раз.
-     *
-     * @return \Faker\Generator
      */
     public function createFakeData(): \Faker\Generator
     {

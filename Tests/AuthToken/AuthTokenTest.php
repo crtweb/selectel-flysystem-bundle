@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Creative\SelectelBundle\Tests\AuthToken;
 
-use Creative\SelectelBundle\Tests\BaseCase;
 use Creative\SelectelBundle\AuthToken\AuthToken;
 use Creative\SelectelBundle\Exception\AuthException;
+use Creative\SelectelBundle\Tests\BaseCase;
+use DateTime;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
-use DateTime;
 
 /**
  * Набор тестов для объекта, который содержит токен доступа к selectel.
