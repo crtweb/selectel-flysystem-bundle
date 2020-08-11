@@ -96,6 +96,7 @@ class ResourceResponse extends Response
      * @return $this
      *
      * @throws LogicException
+     * @psalm-suppress InvalidPropertyAssignmentValue
      */
     public function sendContent()
     {
