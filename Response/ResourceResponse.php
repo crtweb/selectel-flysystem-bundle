@@ -54,7 +54,7 @@ class ResourceResponse extends Response
      */
     public static function create(?string $content = null, $status = 200, $headers = [])
     {
-        return new ResourceResponse($content, $status, $headers);
+        return new static($content, $status, $headers);
     }
 
     /**
