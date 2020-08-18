@@ -56,6 +56,17 @@ interface ServiceInterface
     public function readStream(string $file);
 
     /**
+     * Удаляет файл с сервера.
+     *
+     * @param string $file
+     *
+     * @throws TransportException
+     * @throws AuthException
+     * @throws UnexpectedResponseException
+     */
+    public function deleteOne(string $file): void;
+
+    /**
      * Удаляет файлы с сервера.
      *
      * @param string[] $files

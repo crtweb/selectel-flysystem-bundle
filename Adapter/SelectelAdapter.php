@@ -100,7 +100,7 @@ class SelectelAdapter implements AdapterInterface
     public function rename($path, $newpath)
     {
         $this->service->copy($path, $newpath);
-        $this->service->delete([$path]);
+        $this->service->deleteOne($path);
 
         return true;
     }
@@ -128,7 +128,7 @@ class SelectelAdapter implements AdapterInterface
      */
     public function delete($path)
     {
-        $this->service->delete([$path]);
+        $this->service->deleteOne($path);
 
         return true;
     }
