@@ -145,6 +145,20 @@ class SelectelService implements ServiceInterface
     /**
      * @inheritdoc
      */
+    public function deleteOne(string $file): void
+    {
+        $container = $this->config->getContainer();
+        $toDelete = $container . '/' . $this->normalizeFileName($file);
+
+        $response = $this->requestAuthorized('delete', 'v1/SEL_' . $this->config->getAccountId() . '/' . $toDelete);
+        if ($response->getStatusCode() !== 204) {
+            throw new UnexpectedResponseException('Expects 204 on delete response, got: ' . $response->getStatusCode());
+        }
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function delete(array $files): void
     {
         $container = $this->config->getContainer();

@@ -136,7 +136,7 @@ class SelectelAdapterTest extends BaseCase
             $this->equalTo($path),
             $this->equalTo($newPath)
         );
-        $service->expects($this->once())->method('delete')->with($this->equalTo([$path]));
+        $service->expects($this->once())->method('deleteOne')->with($this->equalTo($path));
 
         $adapter = new SelectelAdapter($service);
 
@@ -172,7 +172,7 @@ class SelectelAdapterTest extends BaseCase
         $config = $this->getMockBuilder(Config::class)->getMock();
 
         $service = $this->getMockBuilder(ServiceInterface::class)->getMock();
-        $service->expects($this->once())->method('delete')->with($this->equalTo([$path]));
+        $service->expects($this->once())->method('deleteOne')->with($this->equalTo($path));
 
         $adapter = new SelectelAdapter($service);
 

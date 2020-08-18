@@ -43,17 +43,18 @@ class ResourceResponse extends Response
     }
 
     /**
-     * @param mixed $resource
-     * @param int   $status
-     * @param array $headers
+     * @param ?string $content
+     * @param int     $status
+     * @param array   $headers
      *
      * @return static
      *
      * @throws InvalidArgumentException
+     * @psalm-suppress UnsafeInstantiation
      */
-    public static function create($resource = null, $status = 200, $headers = [])
+    public static function create(?string $content = null, $status = 200, $headers = [])
     {
-        return new static($resource, $status, $headers);
+        return new static($content, $status, $headers);
     }
 
     /**
