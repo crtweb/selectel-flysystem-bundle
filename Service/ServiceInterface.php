@@ -58,8 +58,6 @@ interface ServiceInterface
     /**
      * Удаляет файл с сервера.
      *
-     * @param string $file
-     *
      * @throws TransportException
      * @throws AuthException
      * @throws UnexpectedResponseException
