@@ -1,5 +1,5 @@
 {
-    "name": "creative-packages/selectel-flysystem-bundle",
+    "name": "creative/selectel-flysystem-bundle",
     "type": "symfony-bundle",
     "description": "Bundle for selectel's api",
     "keywords": [],
