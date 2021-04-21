@@ -16,7 +16,7 @@ The bundle is installed with `composer` and follows the standard structure, so i
     "repositories": [
         {
             "type": "git",
-            "url": "https://git.crtweb.ru/creative-packages/selectel-flysystem-bundle.git"
+            "url": "https://github.com/crtweb/selectel-flysystem-bundle"
         }
     ]
     ```
@@ -24,7 +24,7 @@ The bundle is installed with `composer` and follows the standard structure, so i
 2. Add the bundle package to the project:
 
     ```bash
-    $ composer require creative-packages/selectel-flysystem-bundle
+    $ composer require creative/selectel-flysystem-bundle
     ```
 
 3. Add the bundle package to the project:
