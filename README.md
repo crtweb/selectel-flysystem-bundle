@@ -1,18 +1,16 @@
-Бандл, который реализует адаптер selectel для flysystem.
-========================================================
+Bundle that implements Selectel adapter for flysystem
+=====================================================
 
-Бандл реализует адаптер selectel для [flysystem](https://flysystem.thephpleague.com/docs/). Предназначен в первую 
-очередь для тех сервисов, которые хотят использовать абстракцию flysystem для доступа к облачному хранилищу selectel.
+Bundle implements Selectel adapter for [flysystem](https://flysystem.thephpleague.com/docs/). Designed primarily for 
+those services that want to use the flysystem abstraction to access Selectel cloud storage.
 
 
+Installation
+------------
 
-Установка.
-----------
+The bundle is installed with `composer` and follows the standard structure, so it is installed automatically on `symfony >= 4.2`
 
-Бандл устанавливается с помощью `composer` и следует стандартной структуре, поэтому на `symfony >=4.2` устанавливается 
-автоматически.
-
-1. Добавить репозиторий в `composer.json` проекта:
+1. Add the repository to project `composer.json`:
 
     ```json
     "repositories": [
@@ -23,13 +21,13 @@
     ]
     ```
 
-2. Добавить пакет бандла в проект:
+2. Add the bundle package to the project:
 
     ```bash
     $ composer require creative-packages/selectel-flysystem-bundle
     ```
 
-3. Настроить доступ к облачному хранилищу selectel:
+3. Add the bundle package to the project:
 
     ```yaml
     # app/config/packages/creative_selectel.yaml
@@ -40,7 +38,7 @@
         container: prod_container
     ```
 
-4. Добавить адаптер selectel в flysytem:
+4. Add selectel adapter to flysystem:
 
     ```yaml
     # app/config/packages/oneup_flysystem.yaml
@@ -62,26 +60,26 @@
                 alias: League\Flysystem\Filesystem
     ```
 
-Настройка.
-----------
+Configuration
+-------------
 
-Доступные опции бандла:
+Available bundle options:
 
-* `account_id` - идентификатор аккаунта на selectel,
+* `account_id` - Selectel account identifier
 
-* `client_id` - идентификатор пользователя selectel, от имени которого будет осуществляться доступ к хранилищу,
+* `client_id` - Selectel user ID, on whose behalf the storage will be accessed
 
-* `client_password` - пароль пользователя,
+* `client_password` - user password
 
-* `container` - контейнер, в котором будут храниться файлы.
+* `container` - the container in which the files will be stored
 
 
 
-Использование в локальном окружении.
-------------------------------------
+Use in a local environment
+--------------------------
 
-Для локальной разработки или для запуска тестов **ни в коем случае нельзя** использовать боевой контейнер. 
-Следует либо ввести координаты тестового контейнера:
+**Never use the production container** for local development or for running tests.
+You should either enter the coordinates of the test container:
 
 ```yaml
 # app/config/packages/dev/creative_selectel.yaml для локальной разработки
@@ -93,8 +91,7 @@ creative_selectel:
     container: test_container
 ```
 
-Либо использовать flysystem адаптер для локальной файловой системы:
-
+Or use the flysystem adapter for the local filesystem:
 ```yaml
 # app/config/packages/dev/oneup_flysystem.yaml для локальной разработки
 # app/config/packages/test/oneup_flysystem.yaml для тестов
